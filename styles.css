@@ -1,0 +1,283 @@
+:root {
+--color-50: #FAFAFA;
+--color-100: #F5F5F5;
+--color-200: #E5E5E5;
+--color-300: #D4D4D4;
+--color-400: #A1A1A1;
+--color-500: #737373;
+--color-600: #525252;
+--color-700: #404040;
+--color-800: #262626;
+--color-900: #171717;
+--color-950: #0A0A0A;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-950);
+    color: var(--color-50);
+    font-family: Arial, sans-serif;
+}
+
+
+/* Header Styles */
+
+.header {
+    width: 100%;
+    padding: 27px 8%;
+    border-bottom: 1px solid var(--color-800);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/*Logo*/
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-50)
+}
+
+/*Menu*/
+
+.menu-toggle {
+    display: none;
+
+    background: none;
+    border: none;
+
+    color: var(--color-50);
+    font-size: 1.8rem;
+
+    cursor: pointer;
+}
+
+/* NAV */
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    list-style: none;
+}
+
+.nav-list a {
+    position: relative;
+
+    color: var(--color-400);
+    text-decoration: none;
+    font-size: 0.95rem;
+
+    transition: color 0.3s ease;
+}
+
+.nav-list a:hover {
+    color: var(--color-50);
+}
+
+/* Línea debajo del enlace */
+
+.nav-list a::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+
+    width: 0;
+    height: 2px;
+
+    background-color: var(--color-50);
+
+    transition: width 0.3s ease;
+}
+
+.nav-list a:hover::after {
+    width: 100%;
+}
+
+/*HERO*/
+
+.hero {
+    min-height: calc(100vh - 80px);
+
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 120px 8%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero h1 {
+    max-width: 800px;
+
+    font-size: clamp(3rem, 8vw, 6rem);
+    line-height: 1;
+    letter-spacing: -0.05em;
+
+    color: var(--color-50);
+}
+
+.hero p {
+    max-width: 600px;
+
+    margin-top: 30px;
+
+    color: var(--color-400);
+    font-size: 1.2rem;
+    line-height: 1.7;
+}
+
+.btn {
+    width: fit-content;
+
+    margin-top: 40px;
+    padding: 14px 24px;
+
+    background-color: var(--color-50);
+    color: var(--color-950);
+
+    border-radius: 8px;
+
+    text-decoration: none;
+    font-weight: 600;
+
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--color-200);
+    transform: translateY(-2px);
+}
+
+
+
+@media (max-width: 768px) {
+
+    .header {
+        padding: 20px;
+    }
+
+    .nav-container {
+        position: relative;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    /* =====================
+       BOTÓN HAMBURGUESA
+       ===================== */
+
+    .menu-toggle {
+        display: block;
+
+        background: transparent;
+        border: none;
+
+        color: var(--color-50);
+        font-size: 2rem;
+
+        cursor: pointer;
+
+        z-index: 20;
+    }
+
+
+    /* =====================
+       MENÚ
+       ===================== */
+
+    .nav {
+        display: none;
+
+        position: absolute;
+
+        top: calc(100% + 15px);
+        left: 0;
+
+        width: 100%;
+
+        padding: 25px;
+
+        background-color: var(--color-900);
+
+        border: 1px solid var(--color-800);
+        border-radius: 12px;
+
+        z-index: 10;
+    }
+
+
+    /* MENÚ ABIERTO */
+
+    .nav.active {
+        display: block;
+    }
+
+
+    /* =====================
+       LISTA
+       ===================== */
+
+    .nav-list {
+        display: flex;
+
+        flex-direction: column;
+        align-items: center;
+
+        gap: 20px;
+
+        list-style: none;
+    }
+
+
+    /* =====================
+       HERO
+       ===================== */
+
+    .hero {
+        min-height: auto;
+
+        padding: 100px 20px;
+
+        text-align: center;
+        align-items: center;
+    }
+
+    .hero h1 {
+        font-size: clamp(2.8rem, 10vw, 4rem);
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 320px;
+
+        text-align: center;
+    }
+}
