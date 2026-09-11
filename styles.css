@@ -439,6 +439,735 @@ body {
     }
 }
 
+
+
+/* =========================
+   PROYECTOS
+========================= */
+
+.projects {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 120px 8%;
+
+    border-top: 1px solid var(--color-800);
+}
+
+
+/* CABECERA */
+
+.projects-header {
+    max-width: 700px;
+    margin-bottom: 60px;
+}
+
+.projects-header h2 {
+    color: var(--color-50);
+
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1;
+    letter-spacing: -0.05em;
+}
+
+.projects-header p {
+    margin-top: 25px;
+
+    color: var(--color-400);
+
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+
+/* CONTENEDOR */
+
+.projects-container {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.project-card {
+    background-color: var(--color-900);
+
+    border: 1px solid var(--color-800);
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+
+    border-color: var(--color-600);
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.project-logo {
+    width: 100%;
+    height: 230px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--color-950);
+
+    border-bottom: 1px solid var(--color-800);
+
+    overflow: hidden;
+}
+
+.project-logo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-logo img {
+    transform: scale(1.03);
+}
+
+
+/* LOGO DE DILAN HUB */
+
+.project-logo-text {
+    font-size: 6rem;
+}
+
+.project-logo-text span {
+    display: block;
+
+    transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-logo-text span {
+    transform: scale(1.08) rotate(5deg);
+}
+
+
+/* =========================
+   CONTENIDO
+========================= */
+
+.project-content {
+    padding: 30px;
+}
+
+.project-content h3 {
+    color: var(--color-50);
+
+    font-size: 1.7rem;
+    margin-bottom: 15px;
+}
+
+.project-short-description {
+    color: var(--color-400);
+
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   BOTÓN
+========================= */
+
+.project-btn {
+    width: 100%;
+
+    margin-top: 25px;
+    padding: 14px 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: transparent;
+
+    color: var(--color-50);
+
+    border: 1px solid var(--color-700);
+    border-radius: 8px;
+
+    font-size: 0.95rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.project-btn:hover {
+    background-color: var(--color-800);
+    border-color: var(--color-500);
+}
+
+
+/* FLECHA */
+
+.project-btn span {
+    font-size: 1.1rem;
+
+    transition: transform 0.3s ease;
+}
+
+
+/* Cuando la card está abierta */
+
+.project-card.active .project-btn span {
+    transform: rotate(180deg);
+}
+
+
+/* =========================
+   CONTENIDO DESPLEGABLE
+========================= */
+
+.project-details {
+    display: grid;
+
+    grid-template-rows: 0fr;
+
+    opacity: 0;
+
+    transition:
+        grid-template-rows 0.4s ease,
+        opacity 0.3s ease;
+}
+
+.project-details-content {
+    overflow: hidden;
+
+    padding-top: 0;
+}
+
+
+/* CARD ABIERTA */
+
+.project-card.active .project-details {
+    grid-template-rows: 1fr;
+
+    opacity: 1;
+}
+
+.project-card.active .project-details-content {
+    padding-top: 30px;
+}
+
+
+/* TEXTO INTERNO */
+
+.project-details-content p {
+    color: var(--color-400);
+
+    font-size: 0.95rem;
+    line-height: 1.7;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================
+   TECNOLOGÍAS
+========================= */
+
+.technologies {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 25px;
+}
+
+.technologies span {
+    padding: 7px 12px;
+
+    background-color: var(--color-800);
+
+    color: var(--color-300);
+
+    border-radius: 20px;
+
+    font-size: 0.8rem;
+}
+
+
+/* =========================
+   ENLACES
+========================= */
+
+.project-links {
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 25px;
+}
+
+.project-link {
+    padding: 10px 16px;
+
+    background-color: var(--color-50);
+
+    color: var(--color-950);
+
+    border-radius: 7px;
+
+    text-decoration: none;
+
+    font-size: 0.85rem;
+    font-weight: 600;
+
+    transition: background-color 0.3s ease;
+}
+
+.project-link:hover {
+    background-color: var(--color-200);
+}
+
+
+/* SEGUNDO ENLACE */
+
+.project-link.secondary {
+    background-color: transparent;
+
+    color: var(--color-200);
+
+    border: 1px solid var(--color-700);
+}
+
+.project-link.secondary:hover {
+    background-color: var(--color-800);
+}
+
+
+/* =========================
+   CONTACTO
+========================= */
+
+.contact {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 120px 8%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+
+    border-top: 1px solid var(--color-800);
+}
+
+
+/* =========================
+   INFORMACIÓN DE CONTACTO
+========================= */
+
+.contact-container {
+    max-width: 500px;
+}
+
+.contact-container h2 {
+    color: var(--color-50);
+
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1;
+    letter-spacing: -0.05em;
+}
+
+.contact-container p {
+    margin-top: 25px;
+
+    color: var(--color-400);
+
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   FORMULARIO
+========================= */
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+
+    gap: 25px;
+
+    padding: 35px;
+
+    background-color: var(--color-900);
+
+    border: 1px solid var(--color-800);
+    border-radius: 16px;
+}
+
+
+/* =========================
+   GRUPOS
+========================= */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+/* =========================
+   LABEL
+========================= */
+
+.form-group label {
+    color: var(--color-200);
+
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+
+/* =========================
+   INPUTS Y TEXTAREA
+========================= */
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
+    padding: 14px 16px;
+
+    background-color: var(--color-950);
+
+    color: var(--color-50);
+
+    border: 1px solid var(--color-700);
+    border-radius: 8px;
+
+    font-family: inherit;
+    font-size: 0.95rem;
+
+    outline: none;
+
+    transition:
+        border-color 0.3s ease,
+        background-color 0.3s ease;
+}
+
+
+/* =========================
+   PLACEHOLDER
+========================= */
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--color-600);
+}
+
+
+/* =========================
+   FOCUS
+========================= */
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--color-400);
+
+    background-color: var(--color-900);
+}
+
+
+/* =========================
+   TEXTAREA
+========================= */
+
+.form-group textarea {
+    min-height: 150px;
+
+    resize: vertical;
+}
+
+
+/* =========================
+   MENSAJES DE VALIDACIÓN
+========================= */
+
+.form-message {
+    min-height: 18px;
+
+    color: var(--color-500);
+
+    font-size: 0.8rem;
+
+    transition: color 0.3s ease;
+}
+
+
+/* =========================
+   ESTADO NORMAL
+========================= */
+
+.form-group input,
+.form-group textarea {
+    transition:
+        border-color 0.3s ease,
+        background-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* =========================
+   CAMPO VÁLIDO
+========================= */
+
+.form-group.valid input,
+.form-group.valid textarea {
+    border-color: var(--color-500);
+}
+
+.form-group.valid .form-message {
+    color: var(--color-500);
+}
+
+
+/* =========================
+   CAMPO INVÁLIDO
+========================= */
+
+.form-group.invalid input,
+.form-group.invalid textarea {
+    border-color: var(--color-300);
+
+    background-color: var(--color-900);
+
+    box-shadow: 0 0 0 2px var(--color-800);
+}
+
+.form-group.invalid .form-message {
+    color: var(--color-300);
+}
+
+
+/* =========================
+   BOTÓN
+========================= */
+
+.contact-btn {
+    width: 100%;
+
+    margin-top: 5px;
+    padding: 14px 24px;
+
+    background-color: var(--color-50);
+    color: var(--color-950);
+
+    border: none;
+    border-radius: 8px;
+
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.contact-btn:hover {
+    background-color: var(--color-200);
+
+    transform: translateY(-2px);
+}
+
+.contact-btn:active {
+    transform: translateY(0);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    border-top: 1px solid var(--color-800);
+    padding: 60px 8% 25px;
+    background-color: var(--color-950);
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 60px;
+}
+
+/* =========================
+   FRASE
+========================= */
+
+.footer-brand {
+    max-width: 350px;
+}
+
+.footer-brand p {
+    color: var(--color-400);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* =========================
+   NAVEGACIÓN
+========================= */
+
+.footer-nav ul {
+    display: flex;
+    gap: 25px;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.footer-nav a {
+    color: var(--color-500);
+    text-decoration: none;
+    font-size: 0.85rem;
+
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+    color: var(--color-50);
+}
+
+/* =========================
+   PARTE INFERIOR
+========================= */
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 50px auto 0;
+    padding-top: 25px;
+
+    border-top: 1px solid var(--color-800);
+}
+
+.footer-bottom p {
+    color: var(--color-600);
+    font-size: 0.75rem;
+    line-height: 1.6;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    .footer {
+        padding: 50px 6% 25px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer-nav ul {
+        flex-wrap: wrap;
+        gap: 15px 20px;
+    }
+
+    .footer-bottom {
+        margin-top: 35px;
+    }
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    .contact {
+        padding: 80px 20px;
+
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+
+    .contact-container h2 {
+        font-size: 3rem;
+    }
+
+
+    .contact-form {
+        padding: 25px;
+    }
+
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    .projects {
+        padding: 80px 20px;
+    }
+
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+
+    .projects-header h2 {
+        font-size: 3rem;
+    }
+
+    .project-logo {
+        height: 200px;
+    }
+
+}
+
+
+
+
+
  /* =====================
         SOBRE MI
        ===================== */

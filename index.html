@@ -47,7 +47,7 @@
             Bienvenido a mi portafolio.
         </p>
 
-        <a href="#contacto" class="btn">Contactame y transformemos tu negocio</a>
+        <a href="#contacto" class="btn">¡Contactame!</a>
 </section>
 </main>
 
@@ -139,7 +139,7 @@
             <div class="skill-info">
 
                 <h3>
-                    JSCRIPT
+                    JAVASCRIPT
                 </h3>
                 <span>55%</span>
 
@@ -178,18 +178,283 @@
 </main>
 
 
+<!--PROYECTOS-->
+
+    <main>
+    <section class="projects" id="proyectos">
+
+        <div class="projects-header">
+            <h2>PROYECTOS QUE HE DESARROLLADO</h2>
+
+            <p>
+                A continuación te presento algunos de los proyectos que he
+                desarrollado durante mi formación como desarrollador web y que considero son los más relevantes.
+            </p>
+        </div>
+
+
+        <div class="projects-container">
+
+            <!-- =========================
+                 PROYECTO URBANIX
+            ========================== -->
+
+            <article class="project-card">
+
+                <div class="project-logo">
+                    <img src="img/assest/Urbanix_logo.png" alt="Logo de UrbanIX">
+                </div>
+
+                <div class="project-content">
+
+                    <h3>UrbanIX</h3>
+
+                    <p class="project-short-description">
+                        Plataforma de comercio electrónico enfocada en ofrecer
+                        una experiencia moderna y versátil para el público juvenil.
+                    </p>
+
+                    <button class="project-btn" type="button">
+                        Ver proyecto
+                        <span>↓</span>
+                    </button>
+
+                    <!-- CONTENIDO DESPLEGABLE -->
+
+                    <div class="project-details">
+
+                        <div class="project-details-content">
+
+                            <p>
+                                UrbanIX es una plataforma de comercio electrónico
+                                diseñada para ofrecer a la población juvenil una
+                                experiencia de compra más versátil y única.
+                            </p>
+
+                            <p>
+                                El proyecto fue desarrollado principalmente
+                                utilizando tecnologías web como HTML5, CSS3
+                                y JavaScript.
+                            </p>
+
+                            <div class="technologies">
+
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+
+                            </div>
+
+                            <div class="project-links">
+
+                                <a href="#" class="project-link">
+                                    Ver proyecto
+                                </a>
+
+                                <a href="#" class="project-link secondary">
+                                    GitHub
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- =========================
+                 PROYECTO DILAN HUB
+            ========================== -->
+
+            <article class="project-card">
+
+                <div class="project-logo project-logo-text">
+                    <span>🌐</span>
+                </div>
+
+                <div class="project-content">
+
+                    <h3>Dilan Hub🌐</h3>
+
+                    <p class="project-short-description">
+                        Portafolio profesional desarrollado para presentar
+                        mis habilidades, proyectos y crecimiento como desarrollador.
+                    </p>
+
+                    <button class="project-btn" type="button">
+                        Ver proyecto
+                        <span>↓</span>
+                    </button>
+
+                    <!-- CONTENIDO DESPLEGABLE -->
+
+                    <div class="project-details">
+
+                        <div class="project-details-content">
+
+                            <p>
+                                Dilan Hub funciona como un portafolio profesional
+                                creado para presentar mis proyectos, habilidades
+                                y conocimientos como desarrollador web en formación.
+                            </p>
+
+                            <p>
+                                El sitio busca transmitir una imagen profesional,
+                                sencilla y moderna, utilizando tecnologías
+                                fundamentales del desarrollo web.
+                            </p>
+
+                            <div class="technologies">
+
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+
+                            </div>
+
+                            <div class="project-links">
+
+                                <a href="#" class="project-link">
+                                    Ver proyecto
+                                </a>
+
+                                <a href="#" class="project-link secondary">
+                                    GitHub
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+</main>
+
+
+<main>
+    <section class="contact" id="contacto">
+
+        <div class="contact-container">
+
+            <h2>    Hablemos    </h2>
+
+        <p>¿Tienes un proyecto en mente? Estoy aquí para ayudarte a llevarlo a la realidad. Puedes escribirme o mandarme una solicitud de contacto y podemos hablar sobre lo que necesitas.</p>
+
+        </div>
+
+        <form class="contact-form" id="contact-form">
+
+            <div class="form-group">
+
+                <!--NOMBRE-->
+
+                <label for="name">  Nombre  </label>
+
+                <input 
+                type="text" 
+                id="name" 
+                name="name" required>
 
 
 
+                <small class="form-message"></small>
 
 
 
-    
+            </div>
+            
+            
+            <div class="form-group">
 
-<script src="script.js"></script>
+                <!--CORREO ELECTRÓNICO-->
+
+                <label for="email"> Correo electrónico  </label>
+
+                <input 
+                type="email" 
+                id="email" 
+                name="email" required>
+
+
+
+                <small class="form-message"></small> 
+
+
+
+            </div>
+            
+            
+            <div class="form-group">
+
+                <!--MENSAJE-->
+
+                <label for="message">  Mensaje  </label>
+
+                <textarea 
+                id="message" 
+                name="message" 
+                rows="5" 
+                required></textarea>
+
+
+                <small class="form-message"></small>
+
+
+            </div>
+
+                <!--BOTÓN DE ENVÍO-->
+
+            <button type="submit" class="btn">  
+
+                Enviar mensaje  
+
+            </button>
+
+
+        </form>
+
+    </section>
+</main>
+
+    <script src="script.js"></script>
 </body>
 
-<footer>
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-brand">
+            <p>Transformando ideas en experiencias digitales.</p>
+        </div>
+
+        <nav class="footer-nav">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+            </ul>
+        </nav>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>
+            © 2026 Dilan Hub. Todos los derechos reservados.
+            Proyecto desarrollado siendo parte de Jóvenes Creativos 2026.
+        </p>
+    </div>
 
 </footer>
 </html>
